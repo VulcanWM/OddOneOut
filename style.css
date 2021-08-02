@@ -1,0 +1,16 @@
+body {
+  background: blue;
+  color: white;
+  text-align: center;
+  font-family: "Comic Sans MS", sans-serif;
+}
+strong {
+  color: #2f799c;
+  position: absolute;
+  font-size: 30px;
+}
+
+strong:hover {
+  color: #3493bf;
+  font-size: 30px
+}
