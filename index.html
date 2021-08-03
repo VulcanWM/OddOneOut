@@ -8,12 +8,14 @@
   </head>
   <body>
     <h1>Odd One Out</h1>
+    <strong onclick="changelevel('1')">Play Level 1</strong><br><strong onclick="changelevel('2')">Play Level 2</strong><br><strong onclick="changelevel('3')">Play Level 3</strong>
+    <div>Level: <span id="level"></span></div>
     <div>High Score: <span id="cookie"></span></div>
     <div>Time left: <span id="timer"></span></div>
     <div>Score: <span id="score"></span></div>
+
     <div id="myCanvas">
       <p>Find the odd one out</p>
-      
       <p id="text"></p>
     </div>
     <script src="script.js"></script>
