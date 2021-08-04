@@ -1,6 +1,6 @@
 body {
-  background: blue;
-  color: white;
+  color: #81CFF2;
+  background-color: #171D2D;
   text-align: center;
   font-family: "Comic Sans MS", sans-serif;
 }
@@ -15,5 +15,9 @@ strong:hover {
 }
 
 .absolute {
-  position: absolute;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  line-height: 50%;
 }

@@ -16,6 +16,8 @@ function changelevel(thelevel){
   document.getElementById('level').innerHTML = thelevel
   document.getElementById('timer').innerHTML =
   01 + ":" + 00
+  startTimer();
+  score = 0;
   document.getElementById('score').innerHTML = 0
   var x = document.cookie;
   if (typeof x === 'string' || x instanceof String) {
@@ -67,8 +69,8 @@ function startTimer() {
       document.cookie = cookie
     }
     can=document.getElementById('myCanvas');
-    can.style.background='red';
-    can.style.color='black';
+    can.style.background='#171D2D';
+    can.style.color='#2f799c';
     can.style.fontSize='60px';
     can.style.textShadow='0.5px 1px 1.5px black';
     can.style.opacity='100%';
@@ -110,9 +112,9 @@ function changegame(){
   for (lettera of textarray){
     if (document.getElementById('level').innerText == "3"){
       if (lettera === special){
-        allcode = allcode + `<strong class="absolute" onclick="scorechange()">${lettera}</strong><br>`
+        allcode = allcode + `<strong class="absolute" onclick="scorechange()">${lettera}</strong>`
       } else {
-        allcode = allcode + `<strong class="absolute">${lettera}</strong><br>`
+        allcode = allcode + `<strong class="absolute">${lettera}</strong>`
       }
     } else {
       if (lettera === special){
