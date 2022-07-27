@@ -21,3 +21,7 @@ strong:hover {
   padding-top: 0px;
   line-height: 50%;
 }
+
+#myCanvas {
+  font-size: 30px;
+}

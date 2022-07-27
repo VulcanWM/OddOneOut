@@ -1,12 +1,20 @@
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
+function getCookie(cookieName) {
+  let cookie = {};
+  document.cookie.split(';').forEach(function(el) {
+    let [key,value] = el.split('=');
+    cookie[key.trim()] = value;
+  })
+  return cookie[cookieName];
+}
 var level = "1";
 document.getElementById('level').innerHTML = level;
 function changelevel(thelevel){
   can=document.getElementById('myCanvas');
-  can.style.background='blue';
-  can.style.color='white';
+  can.style.background='#171D2D';
+  can.style.color='#81CFF2';
   can.style.fontSize='30px';
   can.style.textShadow='none';
   can.style.opacity='none';
@@ -16,12 +24,14 @@ function changelevel(thelevel){
   document.getElementById('level').innerHTML = thelevel
   document.getElementById('timer').innerHTML =
   01 + ":" + 00
-  startTimer();
   score = 0;
+  startTimer();
   document.getElementById('score').innerHTML = 0
   var x = document.cookie;
   if (typeof x === 'string' || x instanceof String) {
-    //pass
+    if (getCookie("hs0") === false ) {
+      document.cookie = "hs=0,hs1=0,hs2=0,hs3=0;expires=18 Dec 4040 12:00:00 UTC";
+    }
   } else {
     document.cookie = "hs=0,hs1=0,hs2=0,hs3=0;expires=18 Dec 4040 12:00:00 UTC";
   }
